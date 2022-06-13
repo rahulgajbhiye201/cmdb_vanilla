@@ -11,7 +11,11 @@ app.use(express.static("public"));
 app.use(domainrouters);
 app.use(express.json());
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
 
-app.listen(3000, function () {
-  console.log("Server is running on 3000 port.");
+app.listen(port, function () {
+  console.log("Server has started successfully.");
 });
