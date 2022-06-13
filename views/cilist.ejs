@@ -1,0 +1,50 @@
+<%- include('partials/header') -%>
+
+<nav class="navbar navbar-dark bg-dark">
+  <a href="/domain" class="navbar-brand nav ">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+  </a>
+  <form action="/domains" method="get" class="formpostion">
+      <input class="Inputclass1" type="text" class="form-control" name="searches" placeholder="Search Configuration Items">
+      <button type="submit" class="btn btn-dark">Search</button>
+  </form>
+</nav>
+
+
+<div class="container1">
+  <div class="row">
+    <% if(listofCi!=null) { %>
+
+    <table
+      class="table table-dark table-bordered table-hover table-responsive"
+      id="cilistingtable"
+    >
+      <tr>
+        <th>Name</th>
+        <th>InstallStatus</th>
+        <th>Category</th>
+        <th>SupportGroup</th>
+        <th>SystemRole</th>
+        <th>IP Address</th>
+        <th>Location</th>
+      </tr>
+      <% listofCi.forEach(function(item){ %>
+      <tr>
+        <td>
+          <a href="/server?Name=<%= item.Name %>" class="link-light card bg-dark border border-dark rounded-0 text-underline-hover"><%= item.Name %> </a>
+        </td>
+        <td><a class="link-light card bg-dark border border-dark rounded-0 text-underline-none"><%= item.installStatus %> </a></td>
+        <td><a class="link-light card bg-dark border border-dark rounded-0 text-underline-none"><%= item.category %> </a></td>
+        <td><a class="link-light card bg-dark border border-dark rounded-0 text-underline-none"><%= item.supportGroup %> </a></td>
+        <td><a class="link-light card bg-dark border border-dark rounded-0 text-underline-none"><%= item.systemRole %> </a></td>
+        <td><a class="link-light card bg-dark border border-dark rounded-0 text-underline-none"><%= item.ipAddress %> </a></td>
+        <td><a class="link-light card bg-dark border border-dark rounded-0 text-underline-none"><%= item.location %> </a></td>
+      </tr>
+      <% }) %>
+    </table>
+    <% } %>
+  </div>
+</div>
+<%- include('partials/footer') -%>

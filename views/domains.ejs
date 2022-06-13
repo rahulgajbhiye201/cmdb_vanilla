@@ -1,0 +1,75 @@
+<%- include('partials/header') -%>
+
+<div class="d-flex justify-content-center align-items-center searchbarcus">
+  <div class="col-lg-6 search-bar">
+    <div class="search">
+      <form action="/domains" method="get">
+      <input type="text" class="form-control" name="searches" placeholder="Search Configuration Items">
+      <button type="submit" class="btn btn-dark">Search</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container1">
+  <div class="row">
+    <div class="col-lg-3 mb-4">
+      <div class="card bg-dark mx-auto" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title text-white mb-4">ALL CI's</h5>
+          <h6 class="card-subtitle mb-2 text-white-50 mb-4">Card subtitle</h6>
+          <p class="card-text text-white-50 mb-4">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="/cilist" class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 mb-4">
+      <div class="card bg-dark mx-auto" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title text-white mb-4">BEP</h5>
+          <h6 class="card-subtitle mb-2 text-white-50 mb-4">Card subtitle</h6>
+          <p class="card-text text-white-50 mb-4">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a id="BEP" href="/cilist?adminBy=DOMAIN.AFFILIATES.EUR_ALL_TGS"  class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 mb-4">
+      <div class="card bg-dark mx-auto" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title text-white mb-4">TGC</h5>
+          <h6 class="card-subtitle mb-2 text-white-50 mb-4">Card subtitle</h6>
+          <p class="card-text text-white-50 mb-4">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a id="TGC" href="/cilist?adminBy=DOMAIN.AFFILIATES.APME_ALL_TGS" class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 mb-4">
+      <div class="card bg-dark mx-auto" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title text-white mb-4">ASU</h5>
+          <h6 class="card-subtitle mb-2 text-white-50 mb-4">Card subtitle</h6>
+          <p class="card-text text-white-50 mb-4">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a id="ASU" href="/cilist?adminBy=DOMAIN.WINDOWS.PLATFORM_ALL_TGS" class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%- include('partials/footer') -%>
