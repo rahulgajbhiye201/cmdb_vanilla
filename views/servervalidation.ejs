@@ -8,173 +8,170 @@
                     <div class="two"></div>
                     <div class="three"></div>
                 </a>
-                <span id="Title" class="navbar-brand mb-0 h6 navname" style="margin-left: 20px" >
+                <div class="navname">
+                <span id="Title" class="navbar-brand mb-0 h6" style="margin-left: 20px" >
                     <%= item.Name %>
                 </span>
-                <form action="/domains" method="get" class="formpostion">
-                    <input class="Inputclass1" type="text" class="form-control" name="searches"
-                        placeholder="Search Configuration Items" />
-                    <button type="submit" class="btn btn-dark">Search</button>
-                </form>
+                </div>
+                <div class="Editing">
+                    <h3>Editing Mode</h3>
+                </div>
             </nav>
 
-            <div class="a">
-                <H3>Editing Mode</H3>
-            </div>
-            
+        <form id="emailform" action="" method="post" enctype = "multipart/form-data"> 
+                <div class="container2">
 
-            <div class="container2">
-
-              <form id="emailform" action="" method="post" enctype = "multipart/form-data"> 
-                <div class="row">
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inline righter col-lg-4">
-                            <label>Name</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input id="Name" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.Name %>" />
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a id="correct0" class="dropdown-item">Correct Data</a></li>
-                                <li><a id="incorrect0" class="dropdown-item" >Data is not Correct</a></li>
-                                </ul>
-                        </div>
-                    </div>
-
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>Install Status</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input id="InstallStatus" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.installStatus %>" />
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a id="correct1" class="dropdown-item" >Correct Data</a></li>
-                                <li><a id="incorrect1" class="dropdown-item" >Data is not Correct</a></li>
-                                </ul>
-                        </div>
-                    </div>
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>Category</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input id="Category" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.category %>" />
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a id="correct2" class="dropdown-item" >Correct Data</a></li>
-                                <li><a id="incorrect2" class="dropdown-item" >Data is not Correct</a></li>
-                                </ul>
-                        </div>
-                    </div>
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>Support Group</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input id="SupportGroup" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.supportGroup %>" />
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a id="correct3" class="dropdown-item">Correct Data</a></li>
-                                <li><a id="incorrect3" class="dropdown-item">Data is not Correct</a></li>
-                                </ul>
-                        </div>
-                    </div>
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>System Role</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input id="SystemRole" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.systemRole %>" />
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a id="correct4" class="dropdown-item">Correct Data</a></li>
-                                <li><a id="incorrect4" class="dropdown-item"">Data is not Correct</a></li>
-                                </ul>
-                        </div>
-                    </div>
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>IP Address</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input id="IPAddress" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.ipAddress %>" />
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a id="correct5" class="dropdown-item">Correct Data</a></li>
-                                <li><a id="incorrect5" class="dropdown-item">Data is not Correct</a></li>
-                                </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row divsidemargin">
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>Location</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input id="Location" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.location %>" />
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a id="correct6" class="dropdown-item">Correct Data</a></li>
-                                <li><a id="incorrect6" class="dropdown-item">Data is not Correct</a></li>
-                                </ul>
-                        </div>
-                    </div>
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>ILO IP/Hosted On</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input id="HostedOnILOIP" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly
-                                value="<%= item.iloIp %><%= item.hostedOn %>" />
+                    <div class="row">
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inline righter col-lg-4">
+                                <label>Name</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input id="Name" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.Name %>" />
                                 <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a id="correct7" class="dropdown-item" >Correct Data</a></li>
-                                    <li><a id="incorrect7" class="dropdown-item" >Data is not Correct</a></li>
+                                    <li><a id="correct0" class="dropdown-item">Correct Data</a></li>
+                                    <li><a id="incorrect0" class="dropdown-item" >Data is not Correct</a></li>
                                     </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>Reboot Slot</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input id="RebootSlot" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.rebootSlot %>" />
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a id="correct8" class="dropdown-item" >Correct Data</a></li>
-                                <li><a id="incorrect8" class="dropdown-item" >Data is not Correct</a></li>
-                                </ul>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row divsidemargin">
-                    <div class="row col-lg-6 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>Administrator By</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                                <input id="AdministratorBy" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.adminBy %>" />
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>Install Status</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input id="InstallStatus" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.installStatus %>" />
                                 <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a id="correct9" class="dropdown-item">Correct Data</a></li>
-                                <li><a id="incorrect9" class="dropdown-item">Data is not Correct</a></li>
-                                </ul>
+                                    <li><a id="correct1" class="dropdown-item" >Correct Data</a></li>
+                                    <li><a id="incorrect1" class="dropdown-item" >Data is not Correct</a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>Category</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input id="Category" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.category %>" />
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a id="correct2" class="dropdown-item" >Correct Data</a></li>
+                                    <li><a id="incorrect2" class="dropdown-item" >Data is not Correct</a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>Support Group</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input id="SupportGroup" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.supportGroup %>" />
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a id="correct3" class="dropdown-item">Correct Data</a></li>
+                                    <li><a id="incorrect3" class="dropdown-item">Data is not Correct</a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>System Role</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input id="SystemRole" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.systemRole %>" />
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a id="correct4" class="dropdown-item">Correct Data</a></li>
+                                    <li><a id="incorrect4" class="dropdown-item"">Data is not Correct</a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>IP Address</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input id="IPAddress" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.ipAddress %>" />
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a id="correct5" class="dropdown-item">Correct Data</a></li>
+                                    <li><a id="incorrect5" class="dropdown-item">Data is not Correct</a></li>
+                                    </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="row col-lg-6 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>Operating System</label>
-                        </div>
-                        <div id="ab" class="inliner col-lg-8">
-                                <input id="OperatingSystem" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.operatingSystem %>" />
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-                                    <li><a id="correct10" class="dropdown-item">Correct Data</a></li>
-                                    <li><a id="incorrect10" class="dropdown-item">Data is not Correct</a></li>
+
+                    <div class="row divsidemargin">
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>Location</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input id="Location" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.location %>" />
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a id="correct6" class="dropdown-item">Correct Data</a></li>
+                                    <li><a id="incorrect6" class="dropdown-item">Data is not Correct</a></li>
                                     </ul>
+                            </div>
+                        </div>
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>ILO IP/Hosted On</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input id="HostedOnILOIP" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly
+                                    value="<%= item.iloIp %><%= item.hostedOn %>" />
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a id="correct7" class="dropdown-item" >Correct Data</a></li>
+                                        <li><a id="incorrect7" class="dropdown-item" >Data is not Correct</a></li>
+                                        </ul>
+                            </div>
+                        </div>
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>Reboot Slot</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input id="RebootSlot" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.rebootSlot %>" />
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a id="correct8" class="dropdown-item" >Correct Data</a></li>
+                                    <li><a id="incorrect8" class="dropdown-item" >Data is not Correct</a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row divsidemargin">
+                        <div class="row col-lg-6 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>Administrator By</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                    <input id="AdministratorBy" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.adminBy %>" />
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a id="correct9" class="dropdown-item">Correct Data</a></li>
+                                    <li><a id="incorrect9" class="dropdown-item">Data is not Correct</a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <div class="row col-lg-6 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>Operating System</label>
+                            </div>
+                            <div id="ab" class="inliner col-lg-8">
+                                    <input id="OperatingSystem" class="dropdown-toggle card bg-dark inputStyle" autoClose="true" data-bs-toggle="dropdown" aria-expanded="false" readonly value="<%= item.operatingSystem %>" />
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                                        <li><a id="correct10" class="dropdown-item">Correct Data</a></li>
+                                        <li><a id="incorrect10" class="dropdown-item">Data is not Correct</a></li>
+                                        </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-
+            <div class="editbtn" >
+                <button class="btn btn-light editbtnstyle" type="submit" onclick="alert('Mail has been send to CMDB Team')">Submit</button>
             </div>
-            <div id="servervalbtn" >
-                <button class="btn btn-light he" type="submit" onclick="alert('Mail has been send to CMDB Team')">Submit</button>
-            </div>
+        </form> 
             
-            </form>      
+              
+      
+               
 <% }) %>
 <% } %>
 

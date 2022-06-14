@@ -3,125 +3,122 @@
         <% serverDetails.forEach(function(item){ %>
 
             <nav class="navbar navbar-dark bg-dark">
-                <a href="/domain" class="navbar-brand nav">
+                <a href="/domain" class="navbar-brand nav ">
                     <div class="one"></div>
                     <div class="two"></div>
                     <div class="three"></div>
                 </a>
-                <span class="navbar-brand mb-0 h6 navname" style="margin-left: 20px">
+                <div class="navname">
+                <span class="navbar-brand mb-0 h6" style="margin-left: 20px">
                     <%= item.Name %>
                 </span>
-                <form action="/domains" method="get" class="formpostion">
-                    <input class="Inputclass1" type="text" class="form-control" name="searches"
-                        placeholder="Search Configuration Items" />
-                    <button type="submit" class="btn btn-dark">Search</button>
-                </form>
+                </div>
             </nav>
+            
+            <div>
+                <div class="container2">
+                    <div class="row">
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inline righter col-lg-4">
+                                <label>Name</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input class="card inputStyle bg-dark" disabled value="<%= item.Name %>" />
+                            </div>
+                        </div>
 
-            <div class="container2">
-                <div class="row">
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inline righter col-lg-4">
-                            <label>Name</label>
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>Install Status</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input class="card inputStyle bg-dark" disabled value="<%= item.installStatus %>" />
+                            </div>
                         </div>
-                        <div class="inliner col-lg-8">
-                            <input class="card inputStyle bg-dark" disabled value="<%= item.Name %>" />
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>Category</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input class="card inputStyle bg-dark" disabled value="<%= item.category %>" />
+                            </div>
+                        </div>
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>Support Group</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input class="card inputStyle bg-dark" disabled value="<%= item.supportGroup %>" />
+                            </div>
+                        </div>
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>System Role</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input class="card inputStyle bg-dark" disabled value="<%= item.systemRole %>" />
+                            </div>
+                        </div>
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>IP Address</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input class="card inputStyle bg-dark" disabled value="<%= item.ipAddress %>" />
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>Install Status</label>
+                    <div class="row divsidemargin">
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>Location</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input class="card inputStyle bg-dark" disabled value="<%= item.location %>" />
+                            </div>
                         </div>
-                        <div class="inliner col-lg-8">
-                            <input class="card inputStyle bg-dark" disabled value="<%= item.installStatus %>" />
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>ILO IP/Hosted On</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input class="card inputStyle bg-dark" disabled
+                                    value="<%= item.iloIp %><%= item.hostedOn %>" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>Category</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input class="card inputStyle bg-dark" disabled value="<%= item.category %>" />
-                        </div>
-                    </div>
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>Support Group</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input class="card inputStyle bg-dark" disabled value="<%= item.supportGroup %>" />
-                        </div>
-                    </div>
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>System Role</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input class="card inputStyle bg-dark" disabled value="<%= item.systemRole %>" />
+                        <div class="row col-lg-4 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>Reboot Slot</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input class="card inputStyle bg-dark" disabled value="<%= item.rebootSlot %>" />
+                            </div>
                         </div>
                     </div>
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>IP Address</label>
+
+                    <div class="row divsidemargin">
+                        <div class="row col-lg-6 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>Administrator By</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input class="card inputStyle bg-dark" disabled value="<%= item.adminBy %>" />
+                            </div>
                         </div>
-                        <div class="inliner col-lg-8">
-                            <input class="card inputStyle bg-dark" disabled value="<%= item.ipAddress %>" />
+                        <div class="row col-lg-6 divmargin">
+                            <div class="inliner righter col-lg-4">
+                                <label>Operating System</label>
+                            </div>
+                            <div class="inliner col-lg-8">
+                                <input class="card inputStyle bg-dark" disabled value="<%= item.operatingSystem %>" />
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="row divsidemargin">
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>Location</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input class="card inputStyle bg-dark" disabled value="<%= item.location %>" />
-                        </div>
-                    </div>
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>ILO IP/Hosted On</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input class="card inputStyle bg-dark" disabled
-                                value="<%= item.iloIp %><%= item.hostedOn %>" />
-                        </div>
-                    </div>
-                    <div class="row col-lg-4 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>Reboot Slot</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input class="card inputStyle bg-dark" disabled value="<%= item.rebootSlot %>" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row divsidemargin">
-                    <div class="row col-lg-6 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>Administrator By</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input class="card inputStyle bg-dark" disabled value="<%= item.adminBy %>" />
-                        </div>
-                    </div>
-                    <div class="row col-lg-6 divmargin">
-                        <div class="inliner righter col-lg-4">
-                            <label>Operating System</label>
-                        </div>
-                        <div class="inliner col-lg-8">
-                            <input class="card inputStyle bg-dark" disabled value="<%= item.operatingSystem %>" />
-                        </div>
-                    </div>
-                </div>
-                <div id="serverbtn">
-                    <a class="btn bg-light he" href="/servervalidation?Name=<%= item.Name %>">Edit</a>
-                </div>
-                
-
+            </div>
+            <div class="editbtn">
+                <a class="btn bg-light editbtnstyle" href="/servervalidation?Name=<%= item.Name %>">Edit</a>
             </div>
 
 

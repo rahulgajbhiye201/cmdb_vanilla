@@ -27,6 +27,10 @@ th, a, h2{
   text-align: center;
 }
 
+h3{
+  margin-bottom: 0;
+}
+
 section{
   height: 90%;
 }
@@ -96,32 +100,90 @@ label {
   left: 16px;
 }
 
-.search button {
+.search .searchbardomainbtn {
   position: absolute;
   top: 5px;
   right: 5px;
   height: 50px;
-  width: 110px;
+  width: 100px;
   text-align: center;
 }
 
-.search-bar{
-    width: 50%;
+.searchbardomain{
+  margin-top: 50px;
+  justify-content:center;
+  align-items: center;
+  display: flex;
+}
+
+/* Search Bar */
+
+.navname{
+  margin-right: auto;
+}
+
+.editbtn{
+  width: 100%;
+  text-align: center;
+  margin: 60px 0;
+}
+
+.Editing{
+  margin-right: 20px;
+}
+
+.editbtnstyle{
+  padding-left: 50px;
+  padding-right: 50px;
+  color: black;
+}
+
+.searchbar{
+  width: 20%;
+  margin-right: 5px;
+}
+
+.formpostion{
+  display: flex;
+}
+
+.editbtn{
+  color: black;
 }
 
 @media screen and (max-width: 600px) {
-  .search-bar {
-    width: 90%;
-    font-size: 90%;
-  }
-  .search button {
-      width: 75px;
+    .search-bar {
+      width: 90%;
+      font-size: 90%;
     }
-  .footer {
+    .footer {
       position: relative;
     }
-   section {
-      height: 100%;
+
+    .searchbar{
+      width: 80%;
+      margin-right: 5px;
+    }
+    .Editing{
+      margin-right: 20px;
+      width: 100%;
+      text-align: center;
+    }
+    .navname{
+      width: 77%;
+      margin-right: 0;
+    }
+
+    .editbtn{
+      margin: 40px 0;
+    }
+
+    .searchbardomainbtn{
+      width: 70px;
+    }
+
+    .search input {
+      text-indent: 0;
     }
 }
 
@@ -147,6 +209,8 @@ label {
   border: none;
   display: inline;
 }
+
+/* nav bar */
 
 .nav div {
   height: 4px;
@@ -175,46 +239,9 @@ label {
   width: 30px;
 }
 
-.formpostion{
-  display: flex;
-}
 
-.navname{
-  margin-right: auto;
-}
+/* nav bar */
 
-.Inputclass1 {
-  width: 250px;
-  border-radius: 10px;
-  margin-right: 5px;
-}
 
-.searchbarcus{
-  margin-top: 50px;
-}
 
-#serverbtn{
-  align-items: center;
-  position: absolute;
-  left: 46%;
-  margin-top: 100px;
-}
 
-#servervalbtn{
-  align-items: center;
-  position: absolute;
-  left: 46%;
-  margin-top: 100px;
-}
-
-.he{
-  padding-left: 50px;
-  padding-right: 50px;
-  color: black;
-}
-
-.a{
-  text-align: center;
-  margin-top: 30px;
-
-}
