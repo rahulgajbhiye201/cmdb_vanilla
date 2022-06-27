@@ -60,12 +60,12 @@ label {
 }
 
 .text-underline-hover {
-  text-decoration: none;
-}
-
-.text-underline-hover:hover {
   text-decoration: underline;
 }
+
+/* .text-underline-hover:hover {
+  text-decoration: underline;
+} */
 
 .footer {
     position: fixed;
