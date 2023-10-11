@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://rahul:12345@cluster0.wwsmh.mongodb.net/cmDB");
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));

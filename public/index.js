@@ -1,5 +1,3 @@
-console.log("indexjs working");
-
 // Dropdown menu functionality
 
 var elements = document.getElementsByClassName("inputStyle");
